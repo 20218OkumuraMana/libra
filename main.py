@@ -42,14 +42,14 @@ def handle_message(event):
     message = event.message.text
 
     # 返信するメッセージ
-    # res_message = ""
+    res_message = ""
 
-    # if message == "こんにちは":
-    #     res_message = "こんにちは！"
-    # elif message == "ありがとう":
-    #     res_message = "どういたしまして！"
-    # else:
-    #     res_message = "このメッセージは知らないな"
+    if message == "こんにちは":
+        res_message = "こんにちは！"
+    elif message == "ありがとう":
+        res_message = "どういたしまして！"
+    else:
+        res_message = "このメッセージは知らないな"
 
     # 返信する (リプライトークンを使用してテキストで返信する)
     line_bot_api.reply_message(
